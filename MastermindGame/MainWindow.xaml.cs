@@ -89,24 +89,24 @@ namespace MastermindGame
             }
         }
 
-//        private void CheckButton_Click(object sender, RoutedEventArgs e)
-//        {
-//            var userCode = new List<string>
-//            {
-//                comboBox1.SelectedItem?.ToString() ?? "Red",
-//                comboBox2.SelectedItem?.ToString() ?? "Red",
-//                comboBox3.SelectedItem?.ToString() ?? "Red",
-//                comboBox4.SelectedItem?.ToString() ?? "Red"
-//            };
+        private void CheckButton_Click(object sender, RoutedEventArgs e)
+        {
+            var userCode = new List<string>
+            {
+                comboBox1.SelectedItem?.ToString() ?? "Red",
+                comboBox2.SelectedItem?.ToString() ?? "Red",
+                comboBox3.SelectedItem?.ToString() ?? "Red",
+                comboBox4.SelectedItem?.ToString() ?? "Red"
+            };
 
-//            if (userCode.Contains("Red") && (comboBox1.SelectedItem == null || comboBox2.SelectedItem == null || comboBox3.SelectedItem == null || comboBox4.SelectedItem == null))
-//            {
-//                MessageBox.Show("Please select a color for all positions.");
-//                return;
-//            }
+            if (userCode.Contains("Red") && (comboBox1.SelectedItem == null || comboBox2.SelectedItem == null || comboBox3.SelectedItem == null || comboBox4.SelectedItem == null))
+            {
+                MessageBox.Show("Please select a color for all positions.");
+                return;
+            }
 
-//            CheckGuess(userCode);
-//        }
+            CheckGuess(userCode);
+        }
 
 //        private void CheckGuess(List<string> userCode)
 //        {
