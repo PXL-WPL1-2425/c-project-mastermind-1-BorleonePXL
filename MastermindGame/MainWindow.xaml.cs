@@ -22,19 +22,19 @@ namespace MastermindGame
             GenerateColorCode();
         }
 
-//        private void GenerateColorCode()
-//        {
-//            Random rand = new Random();
-//            colorCode = new List<string>
-//            {
-//                colors[rand.Next(colors.Count)],
-//                colors[rand.Next(colors.Count)],
-//                colors[rand.Next(colors.Count)],
-//                colors[rand.Next(colors.Count)]
-//            };
+        private void GenerateColorCode()
+        {
+            Random rand = new Random();
+            colorCode = new List<string>
+            {
+                colors[rand.Next(colors.Count)],
+                colors[rand.Next(colors.Count)],
+                colors[rand.Next(colors.Count)],
+                colors[rand.Next(colors.Count)]
+            };
 
-//            this.Title = "MasterMind(" + string.Join(", ", colorCode) + ")";
-//        }
+            this.Title = "MasterMind(" + string.Join(", ", colorCode) + ")";
+        }
 
 //        private SolidColorBrush GetBrushFromColorString(string colorString)
 //        {
