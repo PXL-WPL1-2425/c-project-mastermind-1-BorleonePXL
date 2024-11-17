@@ -36,58 +36,58 @@ namespace MastermindGame
             this.Title = "MasterMind(" + string.Join(", ", colorCode) + ")";
         }
 
-//        private SolidColorBrush GetBrushFromColorString(string colorString)
-//        {
-//            if (string.IsNullOrWhiteSpace(colorString))
-//            {
-//                return new SolidColorBrush(Colors.Gray);
-//            }
+        private SolidColorBrush GetBrushFromColorString(string colorString)
+        {
+            if (string.IsNullOrWhiteSpace(colorString))
+            {
+                return new SolidColorBrush(Colors.Gray);
+            }
 
-//            try
-//            {
-//                return new SolidColorBrush((Color)ColorConverter.ConvertFromString(colorString));
-//            }
-//            catch (FormatException)
-//            {
-//                return new SolidColorBrush(Colors.Gray);
-//            }
-//        }
+            try
+            {
+                return new SolidColorBrush((Color)ColorConverter.ConvertFromString(colorString));
+            }
+            catch (FormatException)
+            {
+                return new SolidColorBrush(Colors.Gray);
+            }
+        }
 
-//        private void ComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
-//        {
-//            ComboBox combo = sender as ComboBox;
+        private void ComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            ComboBox combo = sender as ComboBox;
 
-//            if (combo.SelectedItem != null)
-//            {
-//                string selectedColor = combo.SelectedItem.ToString();
-//                SolidColorBrush brush = GetBrushFromColorString(selectedColor);
+            if (combo.SelectedItem != null)
+            {
+                string selectedColor = combo.SelectedItem.ToString();
+                SolidColorBrush brush = GetBrushFromColorString(selectedColor);
 
-//                if (combo == comboBox1)
-//                {
-//                    feedBack1.Background = brush;
-//                }
-//                else if (combo == comboBox2)
-//                {
-//                    feedBack2.Background = brush;
-//                }
-//                else if (combo == comboBox3)
-//                {
-//                    feedBack3.Background = brush;
-//                }
-//                else if (combo == comboBox4)
-//                {
-//                    feedBack4.Background = brush;
-//                }
-//            }
-//            else
-//            {
-//                SolidColorBrush defaultBrush = new SolidColorBrush(Colors.White);
-//                feedBack1.Background = defaultBrush;
-//                feedBack2.Background = defaultBrush;
-//                feedBack3.Background = defaultBrush;
-//                feedBack4.Background = defaultBrush;
-//            }
-//        }
+                if (combo == comboBox1)
+                {
+                    feedBack1.Background = brush;
+                }
+                else if (combo == comboBox2)
+                {
+                    feedBack2.Background = brush;
+                }
+                else if (combo == comboBox3)
+                {
+                    feedBack3.Background = brush;
+                }
+                else if (combo == comboBox4)
+                {
+                    feedBack4.Background = brush;
+                }
+            }
+            else
+            {
+                SolidColorBrush defaultBrush = new SolidColorBrush(Colors.White);
+                feedBack1.Background = defaultBrush;
+                feedBack2.Background = defaultBrush;
+                feedBack3.Background = defaultBrush;
+                feedBack4.Background = defaultBrush;
+            }
+        }
 
 //        private void CheckButton_Click(object sender, RoutedEventArgs e)
 //        {
