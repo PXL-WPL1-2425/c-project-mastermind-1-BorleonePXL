@@ -108,52 +108,52 @@ namespace MastermindGame
             CheckGuess(userCode);
         }
 
-//        private void CheckGuess(List<string> userCode)
-//        {
-//            feedBack1.BorderBrush = null;
-//            feedBack2.BorderBrush = null;
-//            feedBack3.BorderBrush = null;
-//            feedBack4.BorderBrush = null;
+        private void CheckGuess(List<string> userCode)
+        {
+            feedBack1.BorderBrush = null;
+            feedBack2.BorderBrush = null;
+            feedBack3.BorderBrush = null;
+            feedBack4.BorderBrush = null;
 
-//            bool[] matchedInCode = new bool[colorCode.Count];
-//            bool[] matchedInUser = new bool[userCode.Count];
+            bool[] matchedInCode = new bool[colorCode.Count];
+            bool[] matchedInUser = new bool[userCode.Count];
 
-//            for (int i = 0; i < userCode.Count; i++)
-//            {
-//                if (userCode[i] == colorCode[i])
-//                {
-//                    SetFeedback(i, Colors.DarkRed);
-//                    matchedInCode[i] = true;
-//                    matchedInUser[i] = true;
-//                }
-//            }
+            for (int i = 0; i < userCode.Count; i++)
+            {
+                if (userCode[i] == colorCode[i])
+                {
+                    SetFeedback(i, Colors.DarkRed);
+                    matchedInCode[i] = true;
+                    matchedInUser[i] = true;
+                }
+            }
 
-//            for (int i = 0; i < userCode.Count; i++)
-//            {
-//                if (!matchedInUser[i])
-//                {
-//                    for (int j = 0; j < colorCode.Count; j++)
-//                    {
-//                        if (!matchedInCode[j] && userCode[i] == colorCode[j])
-//                        {
-//                            SetFeedback(i, Colors.Wheat);
-//                            matchedInCode[j] = true;
-//                            break;
-//                        }
-//                    }
-//                }
-//            }
-//        }
+            for (int i = 0; i < userCode.Count; i++)
+            {
+                if (!matchedInUser[i])
+                {
+                    for (int j = 0; j < colorCode.Count; j++)
+                    {
+                        if (!matchedInCode[j] && userCode[i] == colorCode[j])
+                        {
+                            SetFeedback(i, Colors.Wheat);
+                            matchedInCode[j] = true;
+                            break;
+                        }
+                    }
+                }
+            }
+        }
 
-//        private void SetFeedback(int index, Color color)
-//        {
-//            switch (index)
-//            {
-//                case 0: feedBack1.BorderBrush = new SolidColorBrush(color); break;
-//                case 1: feedBack2.BorderBrush = new SolidColorBrush(color); break;
-//                case 2: feedBack3.BorderBrush = new SolidColorBrush(color); break;
-//                case 3: feedBack4.BorderBrush = new SolidColorBrush(color); break;
-//            }
-//        }
-//    }
-//}
+        private void SetFeedback(int index, Color color)
+        {
+            switch (index)
+            {
+                case 0: feedBack1.BorderBrush = new SolidColorBrush(color); break;
+                case 1: feedBack2.BorderBrush = new SolidColorBrush(color); break;
+                case 2: feedBack3.BorderBrush = new SolidColorBrush(color); break;
+                case 3: feedBack4.BorderBrush = new SolidColorBrush(color); break;
+            }
+        }
+    }
+}
