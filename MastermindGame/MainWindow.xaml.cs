@@ -278,9 +278,10 @@ namespace MastermindGame
 
         private void countTry_Click(object sender, RoutedEventArgs e)
         {
+            //Deze deel moet nog bijgewerkt worden om de nodige pogingen op te halen.
             MessageBox.Show("Aantal Pogingen:{}", "Aantal Pogingen", button: MessageBoxButton.OK);
         }
-        //
+        
 
     }
 }
