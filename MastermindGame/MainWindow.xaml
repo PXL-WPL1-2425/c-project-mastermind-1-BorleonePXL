@@ -35,7 +35,7 @@
             <MenuItem Header="Bestand" Name="headerExplorer" >
                 <MenuItem Header="Nieuw Spel" Name="newGameBtn" Click="newGameBtn_Click">
                     <MenuItem Header="Naam ingeven" Name="newPlayerBtn" Click="newPlayerBtn_Click">
-                        <TextBox Name="newPlayer" Text="Geef je naam in:"></TextBox>
+                        <TextBox Name="newPlayer" Text=""></TextBox>
                     </MenuItem>
                 </MenuItem>
                 <MenuItem Header="High Score" Name="showHighScore" Click="showHighScore_Click"></MenuItem>
