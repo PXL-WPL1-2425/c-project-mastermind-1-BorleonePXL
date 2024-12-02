@@ -33,7 +33,11 @@
        FontWeight="Bold" Grid.Column="1"/>
         <Menu Margin="26,267,286,32">
             <MenuItem Header="Bestand" Name="headerExplorer" >
-                <MenuItem Header="Nieuw Spel" Name="newGameBtn" Click="newGameBtn_Click"></MenuItem>
+                <MenuItem Header="Nieuw Spel" Name="newGameBtn" Click="newGameBtn_Click">
+                    <MenuItem Header="Naam ingeven" Name="newPlayerBtn" Click="newPlayerBtn_Click">
+                        <TextBox Name="newPlayer" Text="Geef je naam in:"></TextBox>
+                    </MenuItem>
+                </MenuItem>
                 <MenuItem Header="High Score" Name="showHighScore" Click="showHighScore_Click"></MenuItem>
                 <MenuItem Header="Afsluiten" Name="closeAppMenuItem" Click="closeAppMenuItem_Click"></MenuItem>
             </MenuItem>

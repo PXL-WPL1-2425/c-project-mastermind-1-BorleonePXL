@@ -1,10 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.Http;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
 using System.Windows.Media;
+using Microsoft.Win32;
 
 namespace MastermindGame
 {
@@ -239,10 +241,29 @@ namespace MastermindGame
             // Update het label in de UI
             timerLabel.Content = $"Tijd: {elapsedTime} seconden";
         }
+        public string playerName = "";
+        private void newPlayerBtn_Click(object sender, RoutedEventArgs e)
+        {
+            playerName = newPlayer.Text;
+        }
 
         private void newGameBtn_Click(object sender, RoutedEventArgs e)
         {
-            
+            if (playerName == "")
+            {
+                MessageBox.Show($"Geef je naam in.", "Nieuw Spel", button: MessageBoxButton.OKCancel, default);
+            }
+            else
+            {
+                InitializeComponent();
+                comboBox1.ItemsSource = colors;
+                comboBox2.ItemsSource = colors;
+                comboBox3.ItemsSource = colors;
+                comboBox4.ItemsSource = colors;
+                GenerateColorCode();
+                UpdateWindowTitle();
+                debugTextBox.Text = "";
+            }
         }
 
         private void showHighScore_Click(object sender, RoutedEventArgs e)
@@ -259,5 +280,7 @@ namespace MastermindGame
         {
             MessageBox.Show("Aantal Pogingen:{}","Aantal Pogingen",button:MessageBoxButton.OK);
         }
+
+       
     }
 }
