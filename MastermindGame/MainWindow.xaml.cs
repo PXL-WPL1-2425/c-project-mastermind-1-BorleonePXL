@@ -276,11 +276,11 @@ namespace MastermindGame
            Application.Current.Shutdown();
         }
 
-        //private void countTry_Click(object sender, RoutedEventArgs e)
-        //{
-        //    MessageBox.Show("Aantal Pogingen:{}","Aantal Pogingen",button:MessageBoxButton.OK);
-        //}
+        private void countTry_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("Aantal Pogingen:{}", "Aantal Pogingen", button: MessageBoxButton.OK);
+        }
+        //
 
-       
     }
 }
